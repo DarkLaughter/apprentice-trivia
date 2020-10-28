@@ -4,7 +4,10 @@ import React from 'react'
 const answers = ["answer1", "answer2", "answer3","answer4"]
 
 const Answers = (props) => {
-    const ansBtns = answers.map((answer) => {
+
+    const { correct,incorrect } = props
+    const options = [correct, ...incorrect]
+    const ansBtns = options.map((answer) => {
         return <button> {answer}</button>
     } )
 
