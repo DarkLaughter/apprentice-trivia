@@ -5,7 +5,7 @@ import data from '../data/Apprentice_TandemFor400_Data.json'
 
 
 
-const Quiz = () => {
+const Quiz = (props) => {
     const [start, setStart] = useState(true)
     const [questionId, setQuestionId] = useState(0)
     const [quiz, setQuiz] = useState([])
@@ -18,13 +18,21 @@ const Quiz = () => {
 
 
     const loadQuiz = () => {
-        const currentQuiz = data.sort(() => Math.random() - 0.5).slice(0, 10)
-        setNumQuestions(currentQuiz.length)
-        setQuiz(currentQuiz)
+        const shuffledData = data.sort(() => Math.random() - 0.5)
+        const currentQuiz = shuffledData.slice(0, 10)
+        const combinedQuiz = currentQuiz.map((obj) => {
+            return {
+                question: obj.question,
+                options: [obj.correct, ...obj.incorrect].sort(() => Math.random() - 0.5),
+                correct: obj.correct
+            }
+        })
+        setNumQuestions(combinedQuiz.length)
+        setQuiz(combinedQuiz)
     }
 
     useEffect(() => { loadQuiz() }, [])
-    useEffect(() => { setCurrentQuestion(quiz[questionId]) }, [questionId])
+    useEffect(() => {setCurrentQuestion(quiz[questionId]) }, [quiz, questionId])
 
     const beginQuiz = () => {
         setStart(prevsetStart => !prevsetStart)
@@ -49,14 +57,10 @@ const Quiz = () => {
 
     }
 
-//    let quizSubmit = (id) => {
-//     props.history.push(`/quizzes/${id}`);
-//   }
-
     if (start) {
         return (
             <div className="container" >
-                <div className="quiz">
+                <div className="begin-box">
                     <button onClick={beginQuiz}>Begin</button>
                 </div>
             </div>
@@ -69,14 +73,13 @@ const Quiz = () => {
             <h2 className="quiz-font">
                 You scored {correctAns} out of {numQuestions}    
             </h2>
-            <button>Play Again</button>
-            <button>Back Home</button>
+            <button onClick={() => props.history.push(`/quiz`)}>Play Again</button>
+                    <button onClick={() => props.history.push(`/`)}>Back Home</button>
 
                 </div>
             </div>
 
         )
-
 
     }else{
     return (
@@ -86,13 +89,12 @@ const Quiz = () => {
                 <Answers
                     answered={answered}
                     correct={currentQuestion.correct}
-                    incorrect={currentQuestion.incorrect}
+                    options={currentQuestion.options}
                     userAnswer={setUserAnswer} />
                 {!answered ?
                     <button onClick={() => AnsSubmit()}>Submit</button>
                     :
                     <button onClick={nextQuestion}>Next Question</button>}
-                
             </div>
         </div>
     )

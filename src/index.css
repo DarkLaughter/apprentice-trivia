@@ -22,7 +22,7 @@ nav ul {
   margin: 0;
   padding-inline-start: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: #781c11;
 }
 nav ul li {
@@ -147,4 +147,28 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.begin-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://sugar4spite.com/wp-content/uploads/2018/12/labyrinth.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+  width: 750px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.begin-box button {
+  text-align: center;
+  height: 60px;
+  width: 200px;
+  margin: 25px;
+  border-radius: 10px;
+  background-color: #f7eef1;
+  box-shadow: 0px 0px 2px 2px rgb(160, 160, 245);
 }

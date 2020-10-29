@@ -2,8 +2,7 @@ import React from 'react'
 
 
 const Answers = (props) => {
-    const { correct,incorrect, userAnswer } = props
-    const options = [correct, ...incorrect]
+    const { correct, userAnswer, options} = props
     const ansBtns = options.map((answer, index) => {
         return <button key={index} onClick={()=>userAnswer(answer)} > {answer}</button>
     } )
