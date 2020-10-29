@@ -42,13 +42,13 @@ const Quiz = (props) => {
     
     const AnsSubmit = () => {
         setAnswered(!answered)
-        if (numQuestions - 1 === questionId) { setEnd(!end)}
         if (userAnswer === currentQuestion.correct) {
             setCorrectAns(correctAns + 1)
         }
     }
     
     const nextQuestion = () => { 
+        if (numQuestions - 1 === questionId) { setEnd(!end)}
         if (end) { setAnswered(!answered)            
         } else {
             setQuestionId(prevQuestionId => prevQuestionId + 1)
@@ -94,7 +94,7 @@ const Quiz = (props) => {
                 {!answered ?
                     <button onClick={() => AnsSubmit()}>Submit</button>
                     :
-                    <button onClick={nextQuestion}>Next Question</button>}
+                    <button onClick={nextQuestion}>{(numQuestions - 1 === questionId) ? "Great Work" : "Next Question"}</button>}
             </div>
         </div>
     )

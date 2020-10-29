@@ -8,11 +8,12 @@ const Home = (props) => {
     return (
         <div className="container">
             <div className="window">
-                <h2 className="font-css" >Safe Toby</h2>
-                <p className="font-css" >Jareth, the Goblin King, has taken Toby.</p>
-                <p className="font-css" >You must walk the labyrinth in order to get him back before he changes into a Goblin Forever</p>
-                <p className="font-css">To win, you will need to answer 10 questions, with 3 only chances to make a mistake</p>
-                <p className="font-css"> Good Luck</p>
+                <h2 className="home-css" >Safe Toby</h2>
+                <p className="home-css" >Jareth, the Goblin King, has taken Toby.</p>
+                <p className="home-css" >You must walk the labyrinth in order to get him back before he changes into a Goblin... Forever.</p>
+                <p className="home-css">There are 21 paths, each with a Question.</p>
+                <p className="home-css">You will need to randomly answer 10 of these questions to make it throught the maze.</p>
+                <p className="home-css">See how many you can answer correctly</p>
                 <button className="win-btn" onClick={platBtn} >Play</button>
 
             </div>
