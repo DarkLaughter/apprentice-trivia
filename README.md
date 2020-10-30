@@ -21,6 +21,9 @@ Some addtional items
 - QA is questions and answers, some of the questions are specific, so they are provided with the answers for your review.
 - The Media option in the Navbar will provide some videos such as the Movie Trailer. To help familiarze anyone that does not recall or know the movie.
 
+This App is also live for demo purposes using this link [Labyrinth Walk](https://labyrinthwalk.netlify.app/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/212b4868-782b-410d-b0b5-7e1b8ffa5470/deploy-status)](https://app.netlify.com/sites/labyrinthwalk/deploys)
+
 Be sure to reach out, if there are any questions or suggestions.<br />
 Most of all ... <br />
 ![](https://media3.giphy.com/media/JsgiYyXRSe1fxvEYN4/200.gif)
