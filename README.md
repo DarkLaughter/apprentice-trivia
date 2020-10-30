@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+<img width="100%" src="https://fanart.tv/fanart/movies/13597/moviebanner/labyrinth-53a8a1ba2954f.jpg" alt="banner image of Jaret from the movie Labyrinth">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to Labyrinth Walk
 
-## Available Scripts
+This is a Trivia App, made for my submission for the 2020 Tandem SE Apprentice Challenge.
+This app is built in React JS, using hooks and a data.json file, provided by Tandem for the challenge.
+This app also uses React Router and React Player, so be sure to install should you want to play with this app locally.
 
-In the project directory, you can run:
+The theme for this app takes inpiration from the Jim Henson movie Labyrinth (1986).
 
-### `yarn start`
+Basics for this app include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Being able to view quiestions.
+- Each Quiz is 10 questions(random) out of a possible 21 questions, which will not repeat during your quiz round.
+- Questions are multiple choice, and can only have 1 choice selected for each.
+- Once you submit an answer, the correct answer will be revealed.
+- At the end of the quiz, you will see how many questions you got right.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Some addtional items
 
-### `yarn test`
+- QA is questions an answers, some of the questions are specific, so they are provided with the answers for your review.
+- The Media option in the Navbar will provide some videos such as the Movie Trailer. To help familiarze anyone that does not recall or know the movie.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Be sure to reach out, if there are any questions or suggestions.<br />
+Most of all ... <br />
+![](https://media3.giphy.com/media/JsgiYyXRSe1fxvEYN4/200.gif)

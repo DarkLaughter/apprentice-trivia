@@ -73,7 +73,7 @@ const Quiz = (props) => {
             <h2 className="quiz-font">
                 You scored {correctAns} out of {numQuestions}    
             </h2>
-            <button onClick={() => props.history.push(`/quiz`)}>Play Again</button>
+            <button onClick={() => props.history.go(0)}>Play Again</button>
                     <button onClick={() => props.history.push(`/`)}>Back Home</button>
 
                 </div>
@@ -94,7 +94,7 @@ const Quiz = (props) => {
                 {!answered ?
                     <button onClick={() => AnsSubmit()}>Submit</button>
                     :
-                    <button onClick={nextQuestion}>{(numQuestions - 1 === questionId) ? "Great Work" : "Next Question"}</button>}
+                    <button onClick={nextQuestion}>{(numQuestions - 1 === questionId) ? "Let's See How You Did" : "Next Question"}</button>}
             </div>
         </div>
     )
