@@ -1,6 +1,6 @@
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   margin: 0;
   background-color: #781c11;
 }
@@ -39,9 +39,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #f7eef1;
   padding: 10px;
   border-radius: 10px;
+  color: #781c11;
+  background-color: #f7eef1;
 }
 
 .container {
@@ -50,7 +51,7 @@ nav ul li a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
