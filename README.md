@@ -2,8 +2,8 @@
 
 ## Welcome to Labyrinth Walk
 
-This is a Trivia App, made for my submission for the 2020 Tandem SE Apprentice Challenge.
-This app is built in React JS, using hooks and a data.json file, provided by Tandem for the challenge.
+This is a Trivia App, made for my submission for the 2020 Tandem SE Apprentice Challenge.<br/>
+This app is built in React JS, using hooks and a data.json file, provided by Tandem for the challenge.<br/>
 This app also uses React Router and React Player, so be sure to install should you want to play with this app locally.
 
 The theme for this app takes inpiration from the Jim Henson movie Labyrinth (1986).
@@ -18,7 +18,7 @@ Basics for this app include:
 
 Some addtional items
 
-- QA is questions an answers, some of the questions are specific, so they are provided with the answers for your review.
+- QA is questions and answers, some of the questions are specific, so they are provided with the answers for your review.
 - The Media option in the Navbar will provide some videos such as the Movie Trailer. To help familiarze anyone that does not recall or know the movie.
 
 Be sure to reach out, if there are any questions or suggestions.<br />
