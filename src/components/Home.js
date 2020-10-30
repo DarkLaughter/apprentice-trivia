@@ -8,7 +8,7 @@ const Home = (props) => {
     return (
         <div className="container">
             <div className="window">
-                <h2 className="home-css" >Safe Toby</h2>
+                <h2 className="home-css" >Save Toby</h2>
                 <p className="home-css" >Jareth, the Goblin King, has taken Toby.</p>
                 <p className="home-css" >You must walk the labyrinth in order to get him back before he changes into a Goblin... Forever.</p>
                 <p className="home-css">There are 21 paths, each with a Question.</p>
