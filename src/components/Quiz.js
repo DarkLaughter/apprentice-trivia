@@ -6,6 +6,7 @@ import data from '../data/Apprentice_TandemFor400_Data.json'
 
 
 const Quiz = (props) => {
+    // state for quiz variables
     const [start, setStart] = useState(true)
     const [questionId, setQuestionId] = useState(0)
     const [quiz, setQuiz] = useState([])
@@ -16,7 +17,7 @@ const Quiz = (props) => {
     const [userAnswer, setUserAnswer] = useState('')
     const [correctAns, setCorrectAns] = useState(0)
 
-
+// pulls 10 objects from data.json file, parses and sets to state with UseState Hook
     const loadQuiz = () => {
         const shuffledData = data.sort(() => Math.random() - 0.5)
         const currentQuiz = shuffledData.slice(0, 10)
@@ -31,15 +32,17 @@ const Quiz = (props) => {
         setQuiz(combinedQuiz)
     }
 
+    // handles loading of quiz and answer submissions
     useEffect(() => { loadQuiz() }, [])
     useEffect(() => {setCurrentQuestion(quiz[questionId]) }, [quiz, questionId])
 
+    // changes bolean for quiz start and loads current question from state startion with index 0
     const beginQuiz = () => {
         setStart(prevsetStart => !prevsetStart)
         setCurrentQuestion(quiz[questionId])
     }
 
-    
+    // handles answer submission, changes state in answers component to render answer text 
     const AnsSubmit = () => {
         setAnswered(!answered)
         if (userAnswer === currentQuestion.correct) {
@@ -47,6 +50,7 @@ const Quiz = (props) => {
         }
     }
     
+    // loads next question in the quiz data in state. Also, changes the bolean to enable end screen of quiz which shows score
     const nextQuestion = () => { 
         if (numQuestions - 1 === questionId) { setEnd(!end)}
         if (end) { setAnswered(!answered)            
@@ -57,6 +61,7 @@ const Quiz = (props) => {
 
     }
 
+    //start screen only showing begin button
     if (start) {
         return (
             <div className="container" >
@@ -65,7 +70,7 @@ const Quiz = (props) => {
                 </div>
             </div>
         )
-        
+        // end screen, only available once end boolean is set to true, conditional set when numquestions minus one equals to the current question id
     } else if (end) { 
         return (
             <div className="container">
@@ -80,7 +85,7 @@ const Quiz = (props) => {
             </div>
 
         )
-
+        // renders question and currrent options/multiple choice answers from quiz data in state 
     }else{
     return (
         <div className="container" >
